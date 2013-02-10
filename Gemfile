@@ -16,6 +16,7 @@ group :test, :development do
   gem 'debugger'
   gem 'sqlite3'
   gem 'simplecov'
+  gem 'simplecov-console'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
