@@ -16,3 +16,6 @@
 
 *~
 config/database.yml
+
+# Ignore coverage output
+coverage
