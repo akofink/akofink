@@ -4,25 +4,9 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-require 'simplecov'
-SimpleCov.start do
-	add_group "Models", "app/models"
-	add_group "Controllers", "app/controllers"
-	add_group "Helpers", "app/helpers"
-	add_group "Config Files", "config"
-
-	add_group "Long Files" do |src_file|
-		src_file.lines.count > 100
-	end
-end
-
+require_relative 'simplecov_config'
 require 'cucumber/rails'
-
-require 'webrat'
-
-Webrat.configure do |config|
-	config.mode = :rails
-end
+require_relative 'webrat_config'
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd
