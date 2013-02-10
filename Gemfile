@@ -13,14 +13,17 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'debugger'
+
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'sqlite3'
   gem 'simplecov'
-  gem 'cucumber'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
 end
 
 # Gems used only for assets and not required
