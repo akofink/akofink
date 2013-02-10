@@ -10,4 +10,4 @@ Gems:
   Capybara
   SimpleCov
 
-[andrewkofink in Production](http://andrewkofink.heroku.com){:target="_blank"}
+<a href="http://andrewkofink.heroku.com" target="_blank">andrewkofink in Production</a>
