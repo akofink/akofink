@@ -19,6 +19,8 @@ end
 
 group :test do
   gem 'sqlite3'
+  gem 'simplecov'
+  gem 'cucumber'
 end
 
 # Gems used only for assets and not required
