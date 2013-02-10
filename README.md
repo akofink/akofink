@@ -7,3 +7,7 @@ Gems:
 	Capistrano
 	Travis
 	Cucumber
+  Capybara
+  SimpleCov
+
+andrewkofink.heroku.com
