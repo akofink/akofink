@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  def index
+  def blog
+    @title = "Blog"
   end
 
   def projects
@@ -12,9 +13,5 @@ class PagesController < ApplicationController
 
   def about
   	@title = "About"
-  end
-
-  def show
-
   end
 end
