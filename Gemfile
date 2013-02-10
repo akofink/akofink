@@ -9,6 +9,7 @@ gem 'rails', '3.2.11'
 
 group :test do
   gem 'sqlite3'
+  gem 'activerecord-postgresql-adapter'
 end
 
 group :production do
@@ -17,6 +18,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'activerecord-postgresql-adapter'
 end
 
 # Gems used only for assets and not required
