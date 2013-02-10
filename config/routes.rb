@@ -1,5 +1,7 @@
 Andrewkofink::Application.routes.draw do
-  resources :pages
+  match 'about' => 'pages#about'
+  match 'contact' => 'pages#contact'
+  match 'projects' => 'pages#projects'
 
   match '/github' => redirect('http://github.com/akofink')
   root to:'pages#index'
