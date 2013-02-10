@@ -14,4 +14,12 @@ class PagesController < ApplicationController
   def about
   	@title = "About"
   end
+
+  def media
+    @title = "Media"
+  end
+
+  def albums
+    @title = "Albums"
+  end
 end

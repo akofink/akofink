@@ -2,6 +2,8 @@ Andrewkofink::Application.routes.draw do
   match 'about' => 'pages#about'
   match 'contact' => 'pages#contact'
   match 'projects' => 'pages#projects'
+  match 'media' => 'pages#media'
+  match 'albums' => 'pages#albums'
 
   match '/github' => redirect('http://github.com/akofink')
   root to:'pages#blog'
