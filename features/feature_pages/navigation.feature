@@ -8,6 +8,7 @@ Feature: Navigate to a Static Page
     Then I should see the a tag with the value "About"
     Then I should see the a tag with the value "Contact"
     Then I should see the a tag with the value "Projects"
+    Then I should see the a tag with the value "Albums"
 
   Scenario: Check the content on the home page
     When I am on the home page
@@ -29,6 +30,11 @@ Feature: Navigate to a Static Page
     Then I should see the h1 tag with the value "Projects"
     And I should see the navigation links
 
+  Scenario: Check the content on the albums page
+    When I am on the albums page
+    Then I should see the h1 tag with the value "Albums"
+    And I should see the navigation links
+
   Scenario: The navigation links work
     When I am on the home page
     And I click "Home" in the navigation links
@@ -48,3 +54,8 @@ Feature: Navigate to a Static Page
     When I am on the home page
     And I click "Projects" in the navigation links
     Then I should be on the projects page
+    
+  Scenario: The navigation links work
+    When I am on the home page
+    And I click "Albums" in the navigation links
+    Then I should be on the albums page

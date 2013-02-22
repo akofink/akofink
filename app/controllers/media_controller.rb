@@ -4,10 +4,6 @@ class MediaController < ApplicationController
     @new_media = Media.new
   end
 
-  def show
-    @title = "Media"
-  end
-
   def create
     media = Media.new(params[:media])
     if media.save
@@ -22,8 +18,5 @@ class MediaController < ApplicationController
       log "Destroyed Media Entry: #{media}"
     end
     redirect_to media_path
-  end
-
-  def update
   end
 end
