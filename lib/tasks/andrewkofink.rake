@@ -1,1 +1,1 @@
-task :andrewkofink => ['db:migrate', 'db:test:prepare']
+task :cucumber => ["db:migrate"]
