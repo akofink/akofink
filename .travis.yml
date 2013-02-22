@@ -4,3 +4,6 @@ rvm:
 branches:
 	only:
 		- master
+script: 
+  - bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare

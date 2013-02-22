@@ -7,7 +7,7 @@
 <% end %>
 
 <ul>
-<% Media.all.each do |html| %>
+<% Media.all.reverse.each do |html| %>
   <% log html.html  %>
   <li>
   <%= link_to 'Delete', "media/#{html.id}", method: :delete %><br>
