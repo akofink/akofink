@@ -1,1 +1,0 @@
-task :cucumber => ["db:migrate"]
