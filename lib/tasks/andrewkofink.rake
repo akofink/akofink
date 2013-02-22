@@ -1,0 +1,1 @@
+task :andrewkofink => ['db:migrate', 'db:test:prepare']
