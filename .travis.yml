@@ -4,5 +4,5 @@ rvm:
 branches:
 	only:
 		- master
-script:
-  - bundle exec rake db:migrate && bundle exec rake db:test:prepare
+before_script:
+  - "bundle exec rake db:migrate db:test:prepare"
