@@ -1,0 +1,18 @@
+<h1>Media</h1>
+
+<%= form_for @new_media do |f| %>
+  <%= f.text_area :html %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+<% Media.all.each do |html| %>
+  <% log html.html  %>
+  <li>
+  <%= link_to 'Delete', "media/#{html.id}", method: :delete %><br>
+  <%= raw html.html %>
+  </li>
+  <br>
+<% end %>
+</ul>
