@@ -5,4 +5,6 @@ branches:
 	only:
 		- master
 before_script:
-  - "bundle exec rake db:migrate db:test:prepare"
+  - bundle install
+  - bundle exec rake db:migrate
+  - bundle exec db:test:prepare
