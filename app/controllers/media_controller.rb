@@ -2,6 +2,7 @@ class MediaController < ApplicationController
   def index
     @title = "Media"
     @new_media = Media.new
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   def create
