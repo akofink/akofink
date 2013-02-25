@@ -1,8 +1,4 @@
 class PagesController < ApplicationController
-  def blog
-    @title = "Blog"
-  end
-
   def projects
   	@title = "Projects"
   end
