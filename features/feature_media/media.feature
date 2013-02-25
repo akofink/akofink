@@ -6,10 +6,12 @@ Feature: Media objects are
 
   Scenario: A media object is created
     When I am on the media page
-    And I fill in '<h2>My Text</h2>' into the text field
+    And I fill in 'My Title' into the Title field
+    And I fill in 'My Text' into the Content field
     And I press Post
     Then I should be on the media page
     And I should be able to see "My Text"
+    And I should be able to see "My Title"
 
   Scenario: A media object is destroyed
     When there is a media object "My Latest Post"

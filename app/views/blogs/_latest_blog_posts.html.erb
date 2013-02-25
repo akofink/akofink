@@ -1,4 +1,14 @@
-<% Blog.all.each do |blog| %>
-  <h2><%= blog.title %></h2>
-  <%= raw @markdown.render(blog.content) %>
-<% end %>
+<ul>
+  <% Blog.all.reverse.each do |blog| %>
+    <li>
+      <h2>
+        <%= link_to '#', "##{blog.id}", name: blog.id %>
+        <%= blog.title %>
+      </h2>
+      
+      <%= raw @markdown.render(blog.content) %>
+
+      <%= link_to 'Delete', "blogs/#{blog.id}", method: :delete %><br>
+    </li>
+  <% end %>
+</ul>

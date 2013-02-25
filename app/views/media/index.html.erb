@@ -1,18 +1,24 @@
 <h1>Media</h1>
 
 <%= form_for @new_media do |f| %>
-  <%= f.text_area :html %>
-  <br>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %><br>
+  
   <%= f.submit 'Post' %>
 <% end %>
 
 <ul>
 <% Media.all.reverse.each do |media_post| %>
-  <% log media_post.html  %>
   <li>
-  <%= link_to 'Delete', "media/#{media_post.id}", method: :delete %><br>
-  <%= link_to '-->', "##{media_post.id}", name: media_post.id %><br>
-  <%= raw @markdown.render(media_post.html) %>
+    <h2>
+      <%= link_to '#', "##{media_post.id}", name: media_post.id %>
+      <%= media_post.title %>
+    </h2>
+
+    <%= raw @markdown.render(media_post.content) %>
+    <%= link_to 'Delete', "media/#{media_post.id}", method: :delete %><br>
   </li>
   <br>
 <% end %>

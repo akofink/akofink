@@ -6,7 +6,18 @@ class BlogsController < ApplicationController
   end
 
   def create
-    Blog.new(params[:blog]).save
+    blog = Blog.new(params[:blog])
+    if blog.save
+      log "Created New Blog Entry: #{blog}"
+    end
+    redirect_to root_path
+  end
+
+  def destroy
+    blog = Blog.find(params[:id])
+    if blog.delete
+      log "Destroyed Blog Entry: #{blog}"
+    end
     redirect_to root_path
   end
 end

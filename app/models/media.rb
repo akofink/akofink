@@ -1,7 +1,7 @@
 class Media < ActiveRecord::Base
-  attr_accessible :html
+  attr_accessible :title, :content
 
   def to_s
-    return "#{id} - #{html}"[0..60]
+    return "#{id} - #{title} - #{content}"[0..60]
   end
 end

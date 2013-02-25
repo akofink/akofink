@@ -1,4 +1,5 @@
 Andrewkofink::Application.routes.draw do
+  
   match 'about' => 'pages#about'
 
   match 'contact' => 'pages#contact'
@@ -13,6 +14,9 @@ Andrewkofink::Application.routes.draw do
   match '/github' => redirect('http://github.com/akofink')
 
   resources :blogs
+
+  match 'blog' => 'blogs#index'
+
   root to:'blogs#index'
     
   # The priority is based upon order of creation:
