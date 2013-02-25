@@ -1,0 +1,4 @@
+<% Blog.all.each do |blog| %>
+  <h2><%= blog.title %></h2>
+  <%= raw @markdown.render(blog.content) %>
+<% end %>

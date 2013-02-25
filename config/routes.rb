@@ -12,8 +12,8 @@ Andrewkofink::Application.routes.draw do
 
   match '/github' => redirect('http://github.com/akofink')
 
-  resource :blog
-  root to:'blog#index'
+  resources :blogs
+  root to:'blogs#index'
     
   # The priority is based upon order of creation:
   # first created -> highest priority.
