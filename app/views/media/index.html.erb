@@ -11,6 +11,7 @@
   <% log media_post.html  %>
   <li>
   <%= link_to 'Delete', "media/#{media_post.id}", method: :delete %><br>
+  <%= link_to '-->', "##{media_post.id}", name: media_post.id %><br>
   <%= raw @markdown.render(media_post.html) %>
   </li>
   <br>
