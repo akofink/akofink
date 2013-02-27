@@ -1,5 +1,13 @@
 Andrewkofink::Application.routes.draw do
   
+  get "users/create"
+
+  get "users/update"
+
+  get "users/destroy"
+
+  get "users/show"
+
   match 'about' => 'pages#about'
 
   match 'contact' => 'pages#contact'
