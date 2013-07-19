@@ -30,6 +30,7 @@ group :assets do
 
   gem 'uglifier'
 
+  gem 'less-rails'
   gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 end
 
