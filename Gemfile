@@ -12,14 +12,11 @@ group :test, :development do
   gem 'sqlite3'
   gem 'simplecov'
   gem 'simplecov-console'
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'
 
   gem 'guard-rspec'
-  gem 'guard-cucumber'
 end
 
 # Gems used only for assets and not required

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130225165237) do
+ActiveRecord::Schema.define(version: 20130719023439) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20130225165237) do
     t.datetime "updated_at"
   end
 
-  create_table "media", force: true do |t|
+  create_table "medium", force: true do |t|
     t.text     "content",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
