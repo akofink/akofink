@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= @title %> | Andrew Kofink</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= favicon_link_tag 'favicon.ico' %>
-  <%= favicon_link_tag 'favicon.png' %>
-  <%= csrf_meta_tags %>
-  <%= render 'shared/custom_meta_tags' %>
-  <%= render 'shared/google_analytics' %>
-</head>
-<body>
+  <head>
+    <title><%= @title %> | Andrew Kofink</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= favicon_link_tag 'favicon.png' %>
+    <%= csrf_meta_tags %>
+    <%= render 'shared/custom_meta_tags' %>
+    <%= render 'shared/google_analytics' %>
+  </head>
+  <body>
 
-<%= render 'shared/navigation' %>
+    <%= render 'shared/navigation' %>
 
-<%= yield %>
+    <div class='container'>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <div class='row-fluid'>
+            <div class='span8'>
+              <%= yield %>
+            </div>
 
-<%= render 'shared/development' %>
+            <div class='span4'>
+              <%= render 'shared/twitter_feed' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <%= render 'shared/custom_javascript' %>
-</body>
+    <%= render 'shared/development' %>
+
+    <%= render 'shared/custom_javascript' %>
+  </body>
 </html>
