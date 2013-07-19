@@ -17,6 +17,9 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'
+
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
 end
 
 # Gems used only for assets and not required

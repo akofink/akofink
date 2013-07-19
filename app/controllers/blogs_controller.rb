@@ -6,7 +6,6 @@ class BlogsController < ApplicationController
   end
 
   def create
-    blog = Blog.new(blog_params)
     if blog.save
       log "Created New Blog Entry: #{blog}"
     end
@@ -14,7 +13,6 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    blog = Blog.find(blog_params)
     if blog.delete
       log "Destroyed Blog Entry: #{blog}"
     end
@@ -24,6 +22,10 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.allow(:content, :title)
+    params.require(:blog).permit(:content, :title)
+  end
+
+  def blog
+    @blog ||= (params[:id] && Blog.find(params[:id])) || Blog.new(blog_params)
   end
 end
