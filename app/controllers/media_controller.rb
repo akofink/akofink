@@ -6,7 +6,7 @@ class MediaController < ApplicationController
   end
 
   def create
-    media = Media.new(params[:media])
+    media = Media.new(medium_params)
     if media.save
       log "Created New Media Entry: #{media}"
     end
@@ -14,10 +14,16 @@ class MediaController < ApplicationController
   end
 
   def destroy
-    media = Media.find(params[:id])
+    media = Media.find(medium_params)
     if media.delete
       log "Destroyed Media Entry: #{media}"
     end
     redirect_to media_path
+  end
+
+  private
+
+  def medium_params
+    params.allow(:title, :content)
   end
 end
