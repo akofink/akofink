@@ -31,10 +31,10 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier'
-
-  gem 'less-rails'
-  gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 end
+
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
+gem 'less-rails'
 
 gem 'jquery-rails'
 
