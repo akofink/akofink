@@ -1,12 +1,15 @@
-<ul>
+<ul class='blogs_list'>
   <% Blog.all.reverse.each do |blog| %>
     <li>
       <h2>
-        <%= link_to '#', "##{blog.id}", name: blog.id %>
+        <%= link_to "##{blog.id}", name: blog.id do %>
+          <i class='glyphicon glyphicon-link'></i>
+        <% end %>
+
         <%= blog.title %>
       </h2>
-      
-      <%= raw @markdown.render(blog.content) %>
+
+      <%= @markdown.render(blog.content).html_safe %>
 
       <%= link_to 'Delete', "blogs/#{blog.id}", method: :delete %><br>
     </li>
