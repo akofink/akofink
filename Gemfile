@@ -34,7 +34,9 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                          :github => 'anjlab/bootstrap-rails',
+                          :branch => '3.0.0'
 gem 'less-rails'
 
 gem 'jquery-rails'

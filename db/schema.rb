@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20130719023439) do
     t.string   "password"
     t.string   "salt"
     t.integer  "userlevel"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
