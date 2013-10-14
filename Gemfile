@@ -4,6 +4,23 @@ source 'https://rubygems.org'
 
 gem 'rails', '>=4.0.0'
 
+gem 'anjlab-bootstrap-rails',
+  require: 'bootstrap-rails',
+  github: 'anjlab/bootstrap-rails',
+  branch: '3.0.0'
+gem 'jquery-rails'
+gem 'less-rails'
+gem 'redcarpet'
+gem 'sass-rails'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'coffee-rails'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'uglifier'
+end
+
 group :production do
   gem 'pg'
   gem 'activerecord-postgresql-adapter'
@@ -21,24 +38,3 @@ group :test, :development do
 
   gem 'guard-rspec'
 end
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier'
-end
-
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                          :github => 'anjlab/bootstrap-rails',
-                          :branch => '3.0.0'
-gem 'less-rails'
-
-gem 'jquery-rails'
-
-gem 'redcarpet'
