@@ -6,11 +6,13 @@ class MediaController < ApplicationController
   end
 
   def create
+    protect_content!
+
     medium = Medium.new(medium_params)
     if medium.save
       log "Created New Media Entry: #{medium}"
     end
-    redirect_to '/media'
+    redirect_to Medium
   end
 
   def destroy
@@ -22,11 +24,15 @@ class MediaController < ApplicationController
 
   private
 
+  def protect_content!
+    medium_params[:content] = medium_params[:content].gsub!(/\/\//, '')
+  end
+
   def medium_params
-    params.permit(:medium).permit(:title, :content)
+    params.require(:medium).permit(:title, :content)
   end
 
   def medium
-    @medium ||= (params[:id] && Medium.find(params[:id])) || Medium.new(medium_params)
+    @medium ||= (params[:id] && Medium.find(params[:id])) || Medium.new
   end
 end
