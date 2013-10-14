@@ -1,23 +1,32 @@
 class MediaController < ApplicationController
   def index
     @title = "Media"
-    @new_media = Media.new
+    @new_medium = medium
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   def create
-    media = Media.new(params[:media])
-    if media.save
-      log "Created New Media Entry: #{media}"
+    medium = Medium.new(medium_params)
+    if medium.save
+      log "Created New Media Entry: #{medium}"
     end
-    redirect_to media_path
+    redirect_to '/media'
   end
 
   def destroy
-    media = Media.find(params[:id])
-    if media.delete
-      log "Destroyed Media Entry: #{media}"
+    if medium.delete
+      log "Destroyed Media Entry: #{medium}"
     end
-    redirect_to media_path
+    redirect_to '/media'
+  end
+
+  private
+
+  def medium_params
+    params.permit(:medium).permit(:title, :content)
+  end
+
+  def medium
+    @medium ||= (params[:id] && Medium.find(params[:id])) || Medium.new(medium_params)
   end
 end

@@ -1,8 +1,22 @@
-<nav>
-	<%= link_to 'Home', :root  %>
-	<%= link_to 'About', :about  %>
-	<%= link_to 'Projects', :projects  %>
-  <%= link_to 'Media', :media  %>
-  <%= link_to 'Albums', :albums  %>
-  <%= link_to 'Contact', :contact  %>
-</nav>
+<div class='navbar navbar-inverse'>
+  <div class='navbar-inner'>
+  <%= link_to 'ak', :root, class: 'brand' %>
+    <ul class='nav'>
+      <li>
+      <%= link_to 'About', 'about' %>
+      </li>
+      <li>
+      <%= link_to 'Projects', 'projects' %>
+      </li>
+      <li>
+      <%= link_to 'Media', 'media' %>
+      </li>
+      <li>
+      <%= link_to 'Albums', 'albums' %>
+      </li>
+      <li>
+      <%= link_to 'Contact', 'contact' %>
+      </li>
+    </ul>
+  </div>
+</div>

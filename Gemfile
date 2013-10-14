@@ -1,6 +1,8 @@
+ruby '2.0.0'
+
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '>=4.0.0'
 
 group :production do
   gem 'pg'
@@ -12,24 +14,27 @@ group :test, :development do
   gem 'sqlite3'
   gem 'simplecov'
   gem 'simplecov-console'
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'
+
+  gem 'guard-rspec'
 end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
+
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
+gem 'less-rails'
 
 gem 'jquery-rails'
 

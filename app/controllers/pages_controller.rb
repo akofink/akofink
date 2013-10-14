@@ -1,14 +1,14 @@
 class PagesController < ApplicationController
   def projects
-  	@title = "Projects"
+    @title = "Projects"
   end
 
   def contact
-  	@title = "Contact"
+    @title = "Contact"
   end
 
   def about
-  	@title = "About"
+    @title = "About"
   end
 
   def albums
