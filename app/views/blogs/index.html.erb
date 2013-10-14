@@ -2,6 +2,12 @@
 
 <h1>Blog</h1>
 
-<%= render 'new_blog_post' %>
+<div class='col-md-8'>
+  <%= render 'latest_blog_posts' %>
+</div>
 
-<%= render 'latest_blog_posts' %>
+<div class='row'>
+  <div class='col-md-4'>
+    <%= render 'new_blog_post' %>
+  </div>
+</div>

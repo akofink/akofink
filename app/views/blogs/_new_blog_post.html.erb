@@ -1,7 +1,14 @@
-<%= form_for @new_blog_post do |f| %>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
-  <%= f.label :content %><br>
-  <%= f.text_area :content %><br>
-  <%= f.submit :Post %>
+<h4>New Post</h4>
+<%= form_for @new_blog_post, role: 'form' do |f| %>
+  <div class='form-group'>
+    <%= f.label :title, hidden: true %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :conten, hidden: true  %>
+    <%= f.text_area :content, rows: 15, class: 'form-control', placeholder: 'Markdown-parsed content...' %>
+  </div>
+  <div class='form-group'>
+    <%= f.submit :Post, class: 'btn' %>
+  </div>
 <% end %>
