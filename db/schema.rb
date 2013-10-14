@@ -16,15 +16,25 @@ ActiveRecord::Schema.define(version: 20130719023439) do
   create_table "blogs", force: true do |t|
     t.string   "title"
     t.text     "content",    limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "medium", force: true do |t|
     t.text     "content",    limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "title"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "salt"
+    t.integer  "userlevel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

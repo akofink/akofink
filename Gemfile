@@ -7,6 +7,7 @@ gem 'rails', '>=4.0.0'
 group :production do
   gem 'pg'
   gem 'activerecord-postgresql-adapter'
+  gem 'rails_12factor'
 end
 
 group :test, :development do
