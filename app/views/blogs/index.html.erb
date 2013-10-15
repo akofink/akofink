@@ -3,13 +3,13 @@
 <h1>Blog</h1>
 
 <div class='col-md-8'>
-  <%= image_tag 'profile.jpg', class: 'profile-picture' %>
-
   <%= render 'latest_blog_posts' %>
 </div>
 
 <div class='row'>
   <div class='col-md-4'>
+    <%= image_tag 'profile.jpg', class: 'profile-picture' %>
+
     <%= render 'new_blog_post' %>
   </div>
 </div>

@@ -16,8 +16,7 @@
 @import "twitter/bootstrap";
 
 .profile-picture {
-  height: 400px;
-  float: left;
-  margin: 10px;
-  border: 1px solid #444;
+  width: 80%;
+  margin: 5px 10% 20px 10%;
+  box-shadow: 1px 1px 5px #888888;
 }
