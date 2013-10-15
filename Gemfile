@@ -8,10 +8,13 @@ gem 'anjlab-bootstrap-rails',
   require: 'bootstrap-rails',
   github: 'anjlab/bootstrap-rails',
   branch: '3.0.0'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'less-rails'
 gem 'redcarpet'
+gem 'sass'
 gem 'sass-rails'
+gem 'turbolinks'
 
 # Gems used only for assets and not required
 # in production environments by default.

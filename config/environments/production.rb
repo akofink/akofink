@@ -16,11 +16,13 @@ Andrewkofink::Application.configure do
 
   config.eager_load = true
 
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # Fallback to assets pipeline if a precompiled asset is missed
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  config.assets.precompile += ['.woff', '.eot', '.svg', '.ttf']
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)

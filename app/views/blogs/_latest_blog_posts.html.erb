@@ -1,9 +1,9 @@
-<ul class='blogs_list'>
+<ul class='blogs-list'>
   <% Blog.all.reverse.each do |blog| %>
     <li>
       <h2>
         <%= link_to "##{blog.id}", name: blog.id do %>
-          <i class='glyphicon glyphicon-link'></i>
+          <i class='blog-bullet-point icon-link'></i>
         <% end %>
 
         <%= blog.title %>
