@@ -11,7 +11,7 @@
 
       <%= @markdown.render(blog.content).html_safe %>
 
-      <%= link_to 'Delete', "blogs/#{blog.id}", method: :delete %><br>
+      <%#= link_to 'Delete', "blogs/#{blog.id}", method: :delete %><br>
     </li>
   <% end %>
 </ul>
