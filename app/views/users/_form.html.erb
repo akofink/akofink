@@ -1,0 +1,32 @@
+<%= render 'shared/errors', model: @user %>
+
+<%= form_for @user, role: 'form' do |f| %>
+  <div class='form-group'>
+    <%= f.label :name, hidden: true %>
+    <%= f.text_field :name,
+      placeholder: 'name',
+      class: 'form-control' %>
+  </div>
+
+  <div class='form-group'>
+    <%= f.label :email, hidden: true %>
+    <%= f.text_field :email,
+      placeholder: 'email',
+      class: 'form-control' %>
+  </div>
+
+  <div class='form-group'>
+    <%= f.label :password, hidden: true %>
+    <%= f.password_field :password,
+      placeholder: 'password',
+      class: 'form-control' %>
+  </div>
+
+  <div class='form-group'>
+    <%= f.label :password_confirmation, hidden: true %>
+    <%= f.password_field :password_confirmation,
+      placeholder: 'password confirmation',
+      class: 'form-control' %>
+  </div>
+  <%= f.submit 'Save', class: 'btn' %>
+<% end %>

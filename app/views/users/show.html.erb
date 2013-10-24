@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class='list-group'>
+  <h3 class='list-group-item'><%= @user.name %></h3>
+
+  <p class='list-group-item'>
+    <strong>Email:</strong>
+    <%= @user.email || 'none' %>
+  </p>
+
+  <p class='list-group-item'>
+    <strong>Level:</strong>
+    <%= @user.userlevel || 'none' %>
+  </p>
+</div>
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Back', :back %>

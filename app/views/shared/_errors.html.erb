@@ -1,0 +1,13 @@
+<% if model.errors.present? %>
+  <div class='alert alert-dismissable alert-warning'>
+    <button type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-hidden="true">
+      &times;
+    </button>
+    <% model.errors.full_messages.each do |error_message| %>
+      <%= error_message %><br>
+    <% end %>
+  </div>
+<% end %>
