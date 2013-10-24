@@ -19,6 +19,6 @@
   </div>
 
   <div class='col-md-4'>
-    <%#= render 'form', medium: @new_medium  %>
+    <%= render 'form', medium: @new_medium if current_user  %>
   </div>
 </div>
