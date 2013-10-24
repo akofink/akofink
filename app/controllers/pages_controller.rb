@@ -14,4 +14,10 @@ class PagesController < ApplicationController
   def albums
     @title = "Albums"
   end
+
+  private
+
+  def action_allowed?
+    true
+  end
 end

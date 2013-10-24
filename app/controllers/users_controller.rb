@@ -42,4 +42,8 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit!
   end
+
+  def action_allowed?
+    ['new', 'create'].include?(action) || current_user
+  end
 end

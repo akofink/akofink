@@ -28,4 +28,8 @@ class BlogsController < ApplicationController
   def blog
     @blog ||= (params[:id] && Blog.find(params[:id])) || Blog.new(blog_params)
   end
+
+  def action_allowed?
+    action == 'index' || current_user
+  end
 end

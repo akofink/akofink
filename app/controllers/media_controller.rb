@@ -35,4 +35,8 @@ class MediaController < ApplicationController
   def medium
     @medium ||= (params[:id] && Medium.find(params[:id])) || Medium.new
   end
+
+  def action_allowed?
+    ['index'].include?(action) || current_user
+  end
 end
