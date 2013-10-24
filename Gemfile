@@ -8,6 +8,7 @@ gem 'anjlab-bootstrap-rails',
   require: 'bootstrap-rails',
   github: 'anjlab/bootstrap-rails',
   branch: '3.0.0'
+gem 'bcrypt-ruby'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'less-rails'
