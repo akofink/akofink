@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:success] = 'User successfully created'
-      redirect_to @user
+      redirect_to '/login'
     else
       redirect_to :edit
     end
