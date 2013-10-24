@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131014150745) do
+ActiveRecord::Schema.define(version: 20131024012355) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20131014150745) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_hash"
     t.string   "salt"
     t.integer  "userlevel"
     t.datetime "created_at"
