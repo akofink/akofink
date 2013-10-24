@@ -44,6 +44,6 @@ class UsersController < ApplicationController
   end
 
   def action_allowed?
-    ['new', 'create'].include?(action) || current_user
+    ['new', 'create'].include?(action) || current_user.admin?
   end
 end

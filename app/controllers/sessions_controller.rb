@@ -24,6 +24,6 @@ class SessionsController < ApplicationController
   private
 
   def action_allowed?
-    ['create', 'new'].include?(action) || current_user
+    ['create', 'new'].include?(action) || current_user.admin?
   end
 end

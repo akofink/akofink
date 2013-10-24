@@ -30,6 +30,6 @@ class BlogsController < ApplicationController
   end
 
   def action_allowed?
-    action == 'index' || current_user
+    action == 'index' || current_user.admin?
   end
 end

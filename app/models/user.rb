@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   def valid_password?(password)
     self.password == password
   end
+
+  def admin?
+    access_level && access_level > 10
+  end
 end

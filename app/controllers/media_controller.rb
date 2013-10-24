@@ -37,6 +37,6 @@ class MediaController < ApplicationController
   end
 
   def action_allowed?
-    ['index'].include?(action) || current_user
+    ['index'].include?(action) || current_user.admin?
   end
 end
