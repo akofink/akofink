@@ -18,12 +18,19 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
+    flash[:info] = 'Logged out'
     redirect_to '/login'
   end
 
   private
 
   def action_allowed?
-    ['create', 'new'].include?(action) || current_user.admin?
+    case action
+    when "new", "create"
+      redirect_to '/logout' if current_user
+      true
+    when "destroy"
+      current_user
+    end
   end
 end
