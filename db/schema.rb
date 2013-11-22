@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20131024132841) do
   create_table "blogs", force: true do |t|
     t.string   "title"
     t.text     "content",    limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "media", force: true do |t|
     t.text     "content",    limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "title"
   end
 
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20131024132841) do
     t.string   "email"
     t.string   "password_hash"
     t.integer  "access_level"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
