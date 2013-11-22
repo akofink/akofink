@@ -1,6 +1,9 @@
 <% if Rails.env.development? %>
   <footer>
     <h4>Params:</h4>
-    <aside><%= "#{params}" %></aside>
+    <aside><%= "#{params.inspect}" %></aside>
+
+    <h4>Session:</h4>
+    <aside><%= "#{session.keys.inspect}" %></aside>
   </footer>
 <% end %>

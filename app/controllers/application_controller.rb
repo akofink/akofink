@@ -1,13 +1,17 @@
-include ApplicationHelper
-
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
+
   protect_from_forgery
 
   include Authorization
   before_action :authorize
 
+  def set_current_user(user)
+    session[:user_id] = user && user.id
+  end
+
   def current_user
-    @current_user ||= session[:user]
+    @current_user ||= session[:user_id] && User.find(session[:user_id])
   end
   helper_method :current_user
 
