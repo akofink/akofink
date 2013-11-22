@@ -15,7 +15,7 @@
         "blogs/#{blog.id}/edit" if current_user.try :admin? do %>
         <i class='img-camera-retro'></i>
       <% end %>
-      <%= link_to 'Delete', "blogs/#{blog.id}", method: :delete if current_user.try :admin? %><br>
+      <%= link_to 'Delete', "blogs/#{blog.id}", method: :delete, confirm: "Delete #{blog.title}?" if current_user.try :admin? %><br>
     </li>
   <% end %>
 </ul>
