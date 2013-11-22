@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   def index
     @title = 'Blog'
+    @blogs = Blog.last(5).reverse
     markdown
     @new_blog_post = Blog.new
   end
@@ -46,12 +47,11 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:content, :title)
+    params.require(:blog).permit(:title, :content)
   end
 
   def blog
     @blog ||= (params[:id] && Blog.find(params[:id])) ||
-      Blog.find(blog_params) ||
       Blog.new(blog_params)
   end
 

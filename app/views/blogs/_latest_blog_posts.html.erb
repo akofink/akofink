@@ -1,5 +1,5 @@
 <ul class='blogs-list'>
-  <% Blog.all.reverse.each do |blog| %>
+  <% blogs.each do |blog| %>
     <li>
       <h2>
         <%= link_to "##{blog.id}", name: blog.id do %>
