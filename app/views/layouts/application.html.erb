@@ -14,15 +14,15 @@
     <%= render 'shared/navigation' %>
 
     <div class='container'>
-      <div class='row-fluid'>
-        <div class='span12'>
-          <%= render 'shared/flash' %>
+      <div class='row'>
+        <div class='col-md-6'>
+          <%= render 'shared/flash' %><br />
+        </div>
+      </div>
 
-          <div class='row-fluid'>
-            <div class='span8'>
-              <%= yield %>
-            </div>
-          </div>
+      <div class='row'>
+        <div class='col-md-8'>
+          <%= yield %>
         </div>
       </div>
     </div>
