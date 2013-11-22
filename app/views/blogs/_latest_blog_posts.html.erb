@@ -11,7 +11,11 @@
 
       <%= @markdown.render(blog.content).html_safe %>
 
-      <%#= link_to 'Delete', "blogs/#{blog.id}", method: :delete %><br>
+      <%= link_to 'Edit',
+        "blogs/#{blog.id}/edit" if current_user.try :admin? do %>
+        <i class='img-camera-retro'></i>
+      <% end %>
+      <%= link_to 'Delete', "blogs/#{blog.id}", method: :delete if current_user.try :admin? %><br>
     </li>
   <% end %>
 </ul>

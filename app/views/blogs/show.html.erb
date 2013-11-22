@@ -1,0 +1,16 @@
+<h2>
+  <%= link_to "##{@blog.id}", name: @blog.id do %>
+    <i class='blog-bullet-point icon-link'></i>
+  <% end %>
+
+  <%= @blog.title %>
+</h2>
+
+<%= @markdown.render(@blog.content).html_safe %>
+
+<%= link_to 'Edit',
+  "/blogs/#{@blog.id}/edit" if current_user.try :admin? do %>
+  <i class='img-camera-retro'></i>
+<% end %>
+
+<%= link_to 'Delete', "/blogs/#{@blog.id}", method: :delete if current_user.try :admin? %><br>
