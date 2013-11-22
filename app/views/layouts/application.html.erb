@@ -13,6 +13,8 @@
 
     <%= render 'shared/navigation' %>
 
+    <%= render 'shared/github_fork' %>
+
     <div class='container'>
       <div class='row'>
         <div class='col-md-6'>
@@ -21,9 +23,7 @@
       </div>
 
       <div class='row'>
-        <div class='col-md-8'>
-          <%= yield %>
-        </div>
+        <%= yield %>
       </div>
     </div>
 
