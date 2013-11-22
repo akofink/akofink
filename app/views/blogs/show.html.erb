@@ -5,6 +5,7 @@
 
   <%= @blog.title %>
 </h2>
+<h5><%= blog.created_at.getlocal.strftime("%d %B %Y, %H:%m %Z") %></h5>
 
 <%= @markdown.render(@blog.content).html_safe %>
 
