@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
   def index
     @title = 'Blog'
-    @blogs = Blog.last(5).reverse
+    @blogs = Blog.last(3).reverse
     markdown
     @new_blog_post = Blog.new
   end
