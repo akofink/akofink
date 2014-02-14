@@ -34,12 +34,12 @@ end
 
 group :test, :development do
   gem 'debugger'
+  gem 'coveralls', require: false
+  gem 'guard-rspec'
   gem 'sqlite3'
   gem 'simplecov'
   gem 'simplecov-console'
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'
-
-  gem 'guard-rspec'
 end
