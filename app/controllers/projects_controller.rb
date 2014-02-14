@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     markdown
-    @projects = Project.all
+    @projects = Project.order :created_at
   end
 
   def show
