@@ -20,4 +20,10 @@ class ApplicationController < ActionController::Base
     redirect_to request.env['HTTP_REFERER'] ? :back : args[:default],
       args
   end
+
+  private
+
+  def markdown
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  end
 end

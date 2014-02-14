@@ -1,9 +1,9 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+# You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'ready page:load', ->
   setupLinks = ->
-    $('.blog-content a').attr "target", "_blank"
+    $('.project-description a').attr "target", "_blank"
 
   setupLinks()

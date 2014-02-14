@@ -1,0 +1,30 @@
+<h1>Projects
+  <% if current_user.try :admin? %>
+    <%= link_to new_project_path do %>
+      <%= fa_icon 'plus' %>
+    <% end %>
+  <% end %>
+</h1>
+
+<% @projects.each do |project| %>
+  <div class="row">
+    <div class="col-md-8 project">
+      <div class="thumbnail">
+        <% if current_user.try :admin? %>
+          <div class='pull-right'>
+            <%= link_to edit_project_path(project) do %>
+              <%= fa_icon 'edit' %>
+            <% end %>
+            <%= link_to project, method: 'delete', confirm: 'Delete project?' do %>
+              <%= fa_icon 'times' %>
+            <% end %>
+          </div>
+        <% end %>
+
+        <span class='project-description'>
+          <%= markdown project.description %>
+        </span>
+      </div>
+    </div>
+  </div>
+<% end %>

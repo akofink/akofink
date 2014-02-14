@@ -11,6 +11,7 @@ gem 'anjlab-bootstrap-rails',
 gem 'bcrypt-ruby'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'less-rails'
 gem 'redcarpet'
 gem 'sass'

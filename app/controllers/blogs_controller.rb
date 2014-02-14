@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
 
   def create
     if blog.save
+      flash[:success] = 'Blog successfully added'
       log "Created New Blog Entry: #{blog}"
     end
     redirect_to root_path
@@ -28,7 +29,7 @@ class BlogsController < ApplicationController
   def update
     if blog.update(blog_params)
       flash[:success] = "Post successfully updated."
-      redirect_to blog
+      redirect_to Blog
     else
       flash[:warning] = "Cannot save post."
       redirect_back
@@ -41,10 +42,6 @@ class BlogsController < ApplicationController
   end
 
   private
-
-  def markdown
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-  end
 
   def blog_params
     params.require(:blog).permit(:title, :content)

@@ -10,7 +10,9 @@
       </h2>
       <h5><%= blog.created_at.getlocal.strftime("%d %B %Y, %H:%m %Z") %></h5>
 
-      <%= @markdown.render(blog.content).html_safe %>
+      <span class='blog-content'>
+        <%= @markdown.render(blog.content).html_safe %>
+      </span>
 
       <%= link_to 'Edit',
         "blogs/#{blog.id}/edit" if current_user.try :admin? do %>

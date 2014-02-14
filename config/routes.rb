@@ -1,7 +1,9 @@
 Andrewkofink::Application.routes.draw do
+
   # Resourceful Routes
   resources :blogs
   resources :media
+  resources :projects
   resources :sessions
   resources :users
 
@@ -15,7 +17,6 @@ Andrewkofink::Application.routes.draw do
   get '/github' => redirect('http://github.com/akofink')
   get :login, controller: :sessions, action: :new
   get :logout, controller: :sessions, action: :destroy
-  get :projects, controller: :pages, action: :projects
 
   root to: 'blogs#index'
 end
