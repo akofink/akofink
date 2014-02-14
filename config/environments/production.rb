@@ -14,6 +14,9 @@ Andrewkofink::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
+  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+  config.force_ssl = true
+
   config.eager_load = true
 
   # Fallback to assets pipeline if a precompiled asset is missed
