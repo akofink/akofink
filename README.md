@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/akofink/akofink.png?branch=master)](https://travis-ci.org/akofink/akofink)
 [![Coverage Status](https://coveralls.io/repos/akofink/akofink/badge.png)](https://coveralls.io/r/akofink/akofink)
+[![Code Climate](https://codeclimate.com/github/akofink/akofink.png)](https://codeclimate.com/github/akofink/akofink)
 
 My Personal Site
 
