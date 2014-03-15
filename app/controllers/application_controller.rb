@@ -23,7 +23,31 @@ class ApplicationController < ActionController::Base
 
   private
 
+  class HTMLWithPygments < Redcarpet::Render::VelvetRope
+    def block_code(code, language)
+      sha = Digest::SHA1.hexdigest(code)
+      Rails.cache.fetch ["code", language, sha].join('-') do
+        Pygments.highlight(code, lexer: language)
+      end
+    end
+  end
+
   def markdown
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @renderer ||= HTMLWithPygments.new(
+      emoji: true,
+    )
+
+    @markdown ||= Redcarpet::Markdown.new(
+      @renderer,
+      tables: true,
+      fenced_code_blocks: true,
+      autolink: true,
+      disable_indented_code_blocks: true,
+      space_after_headers: true,
+      superscript: true,
+      underline: true,
+      quote: true,
+      footnotes: true,
+    )
   end
 end

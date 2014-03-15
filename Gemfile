@@ -10,6 +10,7 @@ gem 'anjlab-bootstrap-rails',
   branch: '3.0.0'
 gem 'bcrypt-ruby'
 gem 'font-awesome-rails'
+gem 'gemoji'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'less-rails'
@@ -17,6 +18,7 @@ gem 'redcarpet'
 gem 'sass'
 gem 'sass-rails'
 gem 'turbolinks'
+gem 'velvet_rope'
 
 # Gems used only for assets and not required
 # in production environments by default.

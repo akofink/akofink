@@ -6,4 +6,6 @@ require File.expand_path('../config/application', __FILE__)
 
 task :default => ["db:migrate"]
 
+load 'tasks/emoji.rake'
+
 Andrewkofink::Application.load_tasks
