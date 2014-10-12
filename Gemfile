@@ -36,14 +36,14 @@ end
 
 group :development do
   gem 'debugger'
+  gem 'guard-rspec'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end
 
 group :test, :development do
   gem 'coveralls', require: false
-  gem 'guard-rspec'
   gem 'sqlite3'
-  gem 'simplecov'
-  gem 'simplecov-console'
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'
