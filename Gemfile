@@ -34,8 +34,11 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :test, :development do
+group :development do
   gem 'debugger'
+end
+
+group :test, :development do
   gem 'coveralls', require: false
   gem 'guard-rspec'
   gem 'sqlite3'
