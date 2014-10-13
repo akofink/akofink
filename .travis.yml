@@ -6,3 +6,4 @@ branches:
     - master
   before_script:
     - apt-get install libicu-dev
+  bundler_args: --without development debug
