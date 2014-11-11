@@ -6,4 +6,5 @@ branches:
     - master
   before_script:
     - apt-get install libicu-dev
+    - gem install debugger -v '1.6.5'
   bundler_args: --without development debug
