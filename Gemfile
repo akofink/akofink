@@ -34,12 +34,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :debug do
-  gem 'debugger'
-  gem 'debugger-linecache'
-  gem 'rblineprof'
-end
-
 group :development do
   gem 'guard-rspec'
   gem 'simplecov'
