@@ -1,5 +1,6 @@
 class MediaController < ApplicationController
   def index
+    markdown
     @title = "Media"
     @new_medium = medium
   end
