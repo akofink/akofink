@@ -10,7 +10,7 @@
             <%= medium_post.title %>
           </h2>
 
-          <%= raw @markdown.render(medium_post || '') %>
+          <%= raw @markdown.render(medium_post.content || '') %>
           <%#= link_to 'Delete', "/media/#{medium_post.id}", method: :delete %><br>
         </li>
         <br>
